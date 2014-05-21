@@ -1,6 +1,8 @@
 # Tic Tac Toe game built in HTML5 Boilerplate using Javascript and CSS3.
 * If you want to use this project for your own, just let [me](http://facebook.com/Grigalaa) know.
 
+* Twitter: [http://twitter.com/Grigalaa](http://twitter.com/Grigalaa)
+* Facebook: [https://facebook.com/Grigalaa](https://facebook.com/Grigalaa)
 
 # [HTML5 Boilerplate](http://html5boilerplate.com)
 
