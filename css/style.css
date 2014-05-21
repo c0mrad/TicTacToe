@@ -1,0 +1,85 @@
+@font-face {
+    font-family: ContinuumMedium;
+    src: url(fonts/contm.ttf);
+}
+@font-face {
+    font-family: ContinuumBold;
+    src: url(fonts/contb.ttf);
+}
+
+@font-face {
+    font-family: ContinuumLight;
+    src: url(fonts/contl.ttf);
+}
+
+body{
+    background:#e6eecc url(../img/beige_paper.png) repeat top left;
+    margin: 0px; padding: 0px;
+    color: #333;
+}
+
+#main{
+    width: 61em;
+    max-width: 100%;
+    *zoom: 1;
+    margin: auto;
+}
+
+#main h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4em;
+    text-align: center;
+}
+
+footer h3{
+    font-family: ContinuumLight;
+    font-size: 20px;
+    text-align: center;
+}
+
+#game{
+    margin: auto;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+div ul li {
+    margin-left: 325px;
+}
+
+#wins{
+    color: green;
+}
+
+#losses{
+    color:red;
+}
+
+#ties{
+    color:blue;
+}
+
+#dialogoverlay{
+    display: none;
+    opacity: .8;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #fff;
+    width: 100%;
+    z-index: 10;
+}
+
+#dialogbox{
+    display: none;
+    position: fixed;
+    background: #000;
+    border-radius: 7px;
+    width: 500px;
+    z-index: 10;
+}
+
+#dialogbox > div{background: #fff; margin: 8px;}
+#dialogbox > div > #dialogboxhead{background: #666; font-size: 19px; padding: 10px; color: #ccc; text-align: center;}
+#dialogbox > div > #dialogboxbody{background: #333; padding: 20px; color: #fff; text-align: center;}
+#dialogbox > div > #dialogboxfoot{background: #666; padding: 10px; text-align: right;}
