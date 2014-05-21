@@ -124,8 +124,8 @@ function clickHandler(event){
         if (!checkTie()) {
             if (checkWinner(xBoard)) {
                 document.getElementById('dialogboxbody').style.backgroundColor = "green";
-                Alert.render('<p class="bounceIn animated">თქვენ გაიმარჯვეთ!!</p>');
                 score.win++;
+                Alert.render('<p class="bounceIn animated">თქვენ გაიმარჯვეთ!!</p><p class="lightSpeedIn animated">ანგარიშია '+ score.win + ' : ' + score.lost + '</p>');
                 console.log("თქვენ მოიგეთ, ანგარიშია " + score.win + " : " + score.lost);
                 restart();
             } else {
@@ -133,8 +133,8 @@ function clickHandler(event){
                 if (!checkTie()) {
                     if (checkWinner(oBoard)) {
                         document.getElementById('dialogboxbody').style.backgroundColor = "red";
-                        Alert.render('<p class="bounceInDown animated">თქვენ წააგეთ!!</p>');
                         score.lost++;
+                        Alert.render('<p class="bounceInDown animated">თქვენ წააგეთ!!</p><p class="lightSpeedIn animated">ანგარიშია '+ score.win + ' : ' + score.lost + '</p>');
                         console.log("თქვენ წააგეთ, ანგარიშია " + score.win + " : " + score.lost);
                         restart();
                     }
@@ -241,7 +241,7 @@ function checkTie(){
         score.tie++;
         console.log (score.tie);
         document.getElementById('dialogboxbody').style.backgroundColor = "blue";
-        Alert.render('<p class="bounceIn animated">ფრე...</p>');
+        Alert.render('<p class="bounceIn animated">ფრე...</p><p class="swing animated">ანგარიშია '+ score.win + ' : ' + score.lost + '</p>');
         console.log("ფრე, ანგარიშია " + score.win + " : " + score.lost);
         restart();
         tie = true;
