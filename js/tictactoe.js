@@ -21,7 +21,7 @@ var Alert = new CustomAlert();
 function drawBoard(){
     context.beginPath();
     context.strokeStyle = 'black';
-    context.lineWidth = 4;
+    context.lineWidth = 5;
 
     var vLine1 = Math.round(width / 3);
     var vLine2 = Math.round(vLine1 * 2);
@@ -67,7 +67,7 @@ function drawX(x, y){
     context.beginPath();
 
     context.strokeStyle = '#ff0000';
-    context.lineWidth = 4;
+    context.lineWidth = 15;
 
     var offsetX = (width / 3) * 0.1;
     var offsetY = (height / 3) * 0.1;
@@ -204,7 +204,7 @@ function simulate(oBoard, xBoard){
             if(checkWinner(oBoard | checkBit)){
                 bit = checkBit;
                 break;
-            }else if(checkWinner(xBoard | checkBit)){
+            } else if(checkWinner(xBoard | checkBit)){
                 bit = checkBit;
             }
         }
@@ -239,7 +239,6 @@ function checkTie(){
 
     if((xBoard | oBoard) === 0x1FF){
         score.tie++;
-        console.log (score.tie);
         document.getElementById('dialogboxbody').style.backgroundColor = "blue";
         Alert.render('<p class="bounceIn animated">ფრე...</p><p class="swing animated">ანგარიშია '+ score.win + ' : ' + score.lost + '</p>');
         console.log("ფრე, ანგარიშია " + score.win + " : " + score.lost);
@@ -257,7 +256,7 @@ function play(){
 function draw0(x, y){
     context.beginPath();
     context.strokStyle = '#0000ff';
-    context.lineWidth = 10;
+    context.lineWidth = 15;
 
     var offsetX = (width / 3) * 0.1;
     var offsetY = (height / 3) * 0.1;
@@ -299,7 +298,6 @@ function incrementScores(){
     document.getElementById('ties').innerHTML = score.tie;
 }
 
-
 function CustomAlert(){
     this.render = function(dialog){
         var winWidth    = window.innerWidth;
@@ -312,7 +310,7 @@ function CustomAlert(){
         dialogoverlay.style.height = winHeight+"px";
 
         dialogbox.style.left = (winWidth / 2) - (500 * .5)+"px";
-        dialogbox.style.top  = "142px";
+        dialogbox.style.top  = "110px";
         dialogbox.style.margin = "200px";
         dialogbox.style.marginLeft = "0px";
         dialogbox.style.display = "block";

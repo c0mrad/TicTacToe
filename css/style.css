@@ -67,6 +67,10 @@ footer h3{
     z-index: 10;
 }
 
+#scores li {
+    list-style: none;
+}
+
 #dialogbox{
     display: none;
     position: fixed;

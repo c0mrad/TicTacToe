@@ -3,4 +3,5 @@
 
 *.idea
 *.db
-*.DB_Store
+*.DS_Store
+*.htaccess
